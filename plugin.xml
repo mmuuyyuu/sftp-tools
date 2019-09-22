@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+    <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.runtime.IAdaptable"
+            id="com.easy.ftp.tools.view.contribution1">
+         <menu
+               label="FTP文件管理"
+               icon="icons/ftp.png"
+               path="additions"
+               id="com.easy.ftp.tools.view.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="文件上传"
+               icon="icons/shangchuan.png"
+               class="com.easy.ftp.tools.action.UploadFileAction"
+               menubarPath="com.easy.ftp.tools.view.menu1/group1"
+               enablesFor="+"
+               id="com.easy.ftp.tools.action.UploadFileAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+
+</plugin>
